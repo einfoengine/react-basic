@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import FragmentDemo from './components/FragmentDemo';
+import LifecycleA from './components/LifecycleA';
+import NameList from './components/NameList';
+
+// Data source
+import persons from './public/persons'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NameList persons={persons}/> {/* 17 */}
+      <LifecycleA /> {/* 23, 24 */}
+      <FragmentDemo /> {/* 25 */}
     </div>
   );
 }
