@@ -11,7 +11,6 @@ class LifecycleA extends Component {
         }
         console.log('LifecycleA Constructor')
 
-        // Binding
         this.changeState=this.changeState.bind(this);
     }
 
@@ -23,7 +22,6 @@ class LifecycleA extends Component {
         console.log('LifecycleA Component did mount!');
     }
     
-    // 
     shouldComponentUpdate(){
         console.log('LifecycleA shouldComponentUpdate!');
         return true;
@@ -38,7 +36,6 @@ class LifecycleA extends Component {
         console.log('LifecycleA componentDidUpdate');
     }
     
-    // Helper function
     changeState(){
         this.setState({
             name: 'SA Maruf'
@@ -49,7 +46,7 @@ class LifecycleA extends Component {
         console.log('LifecycleA Render');
         return (
             <div>
-                <div>Life cycle A render</div>
+                <h1>Life cycle A renders B</h1>
                 <button onClick={this.changeState}>Change State</button>
                 <LifecycleB/>
             </div>

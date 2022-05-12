@@ -3,14 +3,15 @@ import React from 'react'
 function NameList(props) {
     const personsList = props.persons.map((element, index)=>{
         return (
-            <h2 key={index+element.__id}>{element.name}</h2>
+            <li key={index+element.__id}>{element.name}</li>
         )
     });
 
     return (
-        <div>
+        <>
+            <h1>Name List</h1>
             {personsList}
-        </div>
+        </>
     )
 }
 
